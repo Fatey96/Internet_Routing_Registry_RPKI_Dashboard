@@ -350,7 +350,6 @@ document.addEventListener('DOMContentLoaded', function() {
     { time: new Date(1971, 0, 1), percentage: 25, status: 'Valid' },
     { time: new Date(1972, 0, 1), percentage: 30, status: 'Invalid' },
     { time: new Date(1973, 0, 1), percentage: 35, status: 'Unknown' },
-    // Extend the dummy data to cover the range from 1970 to 2024
     {time: new Date(1974, 0, 1), percentage: 40, status: 'Valid'},
     { time: new Date(1975, 0, 1), percentage: 45, status: 'Valid' },
     { time: new Date(1976, 0, 1), percentage: 50, status: 'Invalid' },
@@ -433,9 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(queryUrl)
       .then(response => response.json())
       .then(data => {
-        console.log('Filtered data:', data); // Placeholder for actual data handling and visualization update
-        // Here you would update your visualization based on the filtered data.
-        // E.g., updateMap(data), updatePieChart(data), updateLineChart(data)
+        console.log('Filtered data:', data); 
       })
       .catch(error => {
         console.error('Error fetching filtered data:', error.message);
