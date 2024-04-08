@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+  <body>
+<%- include('partials/_header.ejs') %>
+    <main role="main" class="container mt-4">
+      <div class="search-filter-wrapper">
+        <div class="search-filter-container">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control search-input" placeholder="Search" id="searchInput" aria-label="Search" style="background-image: none; padding-left: 10px; height: 38px;">
+          </div>
+          <select class="custom-select filter-dropdown" id="searchFilter" style="padding-right: calc(1.5em + .75rem); background-position: right .75rem center; height: 38px;">
+            <option selected>Choose filter...</option>
+            <option value="asn">ASN</option>
+            <option value="prefix">Prefix</option>
+            <option value="state">State</option>
+          </select>
+        </div>
+      </div>
+      <div class="main-map-container" style="position: relative; width: 100%;">
+        <div class="visualization-container map" id="d3Map" style="position: relative; width: 100%; height: 800px; display: block;">
+          <h2 class="container-header">US State RPKI Status (D3.js)</h2>
+          <!-- Map visualization will be dynamically inserted here -->
+        </div>
+        <div class="leafletMapContainer" id="leafletMap" style="position: relative; width: 100%; height: 800px; display: none; margin-top: 20px;">
+          <h2 class="container-header" style="left: 0;">US State RPKI Status (Leaflet)</h2>
+        </div>
+      </div>
+      <div class="visualization-flex-container">
+        <div class="visualization-container pie-chart">
+          <h2 class="container-header">RPKI Validation Status Overview</h2>
+          <!-- RPKI Status Pie Chart will be dynamically inserted here -->
+        </div>
+        <div class="visualization-container line-chart">
+          <h2 class="container-header">RPKI Status Over Time</h2>
+          <!-- RPKI Over Time Line Chart will be dynamically inserted here -->
+        </div>
+      </div>
+      <div id="tooltip" class="tooltip"></div>
+    </main>
+  </body>
+<%- include('partials/_footer.ejs') %>
+  <script src="/js/main.js"></script>
+  <script src="/js/rpkiVisualization.js"></script>
+  <script src="/js/leafletMap.js"></script>
+  <script>
+    window.initializeLeafletMap();
+  </script>
+</html>

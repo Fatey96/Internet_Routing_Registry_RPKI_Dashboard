@@ -1,0 +1,20 @@
+[
+  {
+    "ASN": 64500,
+    "prefix": "192.0.2.0/24",
+    "state": "California",
+    "validationStatus": "Valid"
+  },
+  {
+    "ASN": 64501,
+    "prefix": "198.51.100.0/24",
+    "state": "Texas",
+    "validationStatus": "Invalid"
+  },
+  {
+    "ASN": 64502,
+    "prefix": "203.0.113.0/24",
+    "state": "New York",
+    "validationStatus": "Unknown"
+  }
+]

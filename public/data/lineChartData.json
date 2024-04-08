@@ -1,0 +1,128 @@
+[
+  {
+    "time": "1970-01-01",
+    "invalidPercentage": 30,
+    "validPercentage": 10,
+    "unknownPercentage": 60
+  },
+  {
+    "time": "1971-01-01",
+    "invalidPercentage": 28,
+    "validPercentage": 15,
+    "unknownPercentage": 57
+  },
+  {
+    "time": "1972-01-01",
+    "invalidPercentage": 25,
+    "validPercentage": 20,
+    "unknownPercentage": 55
+  },
+  {
+    "time": "1973-01-01",
+    "invalidPercentage": 23,
+    "validPercentage": 25,
+    "unknownPercentage": 52
+  },
+  {
+    "time": "1974-01-01",
+    "invalidPercentage": 20,
+    "validPercentage": 30,
+    "unknownPercentage": 50
+  },
+  {
+    "time": "1975-01-01",
+    "invalidPercentage": 18,
+    "validPercentage": 35,
+    "unknownPercentage": 47
+  },
+  {
+    "time": "1976-01-01",
+    "invalidPercentage": 15,
+    "validPercentage": 40,
+    "unknownPercentage": 45
+  },
+  {
+    "time": "1977-01-01",
+    "invalidPercentage": 12,
+    "validPercentage": 45,
+    "unknownPercentage": 43
+  },
+  {
+    "time": "1978-01-01",
+    "invalidPercentage": 10,
+    "validPercentage": 50,
+    "unknownPercentage": 40
+  },
+  {
+    "time": "1979-01-01",
+    "invalidPercentage": 8,
+    "validPercentage": 55,
+    "unknownPercentage": 37
+  },
+  {
+    "time": "1980-01-01",
+    "invalidPercentage": 5,
+    "validPercentage": 60,
+    "unknownPercentage": 35
+  },
+  {
+    "time": "1981-01-01",
+    "invalidPercentage": 3,
+    "validPercentage": 65,
+    "unknownPercentage": 32
+  },
+  {
+    "time": "1982-01-01",
+    "invalidPercentage": 2,
+    "validPercentage": 70,
+    "unknownPercentage": 28
+  },
+  {
+    "time": "1983-01-01",
+    "invalidPercentage": 1,
+    "validPercentage": 75,
+    "unknownPercentage": 24
+  },
+  {
+    "time": "1984-01-01",
+    "invalidPercentage": 0.5,
+    "validPercentage": 80,
+    "unknownPercentage": 19.5
+  },
+  {
+    "time": "1985-01-01",
+    "invalidPercentage": 0.2,
+    "validPercentage": 85,
+    "unknownPercentage": 14.8
+  },
+  {
+    "time": "1986-01-01",
+    "invalidPercentage": 0.1,
+    "validPercentage": 90,
+    "unknownPercentage": 9.9
+  },
+  {
+    "time": "1987-01-01",
+    "invalidPercentage": 0.05,
+    "validPercentage": 95,
+    "unknownPercentage": 4.95
+  },
+  {
+    "time": "1988-01-01",
+    "invalidPercentage": 0.02,
+    "validPercentage": 98,
+    "unknownPercentage": 1.98
+  },
+  {
+    "time": "1989-01-01",
+    "invalidPercentage": 0.01,
+    "validPercentage": 99,
+    "unknownPercentage": 0.99
+  },
+  {
+    "time": "1990-01-01",
+    "invalidPercentage": 0,
+    "validPercentage": 100,
+    "unknownPercentage": 0
+  }
+]

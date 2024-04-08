@@ -1,0 +1,297 @@
+/* Updated styles for a modern, flat design */
+
+:root {
+  /* Light mode colors */
+  --background-color-light: #ffffffbe;
+  --text-color-light: #000000;
+  --primary-color-light: #007BFF;
+  --secondary-color-light: #b5bbc0;
+  --tertiary-color-light: #28A745;
+
+  /* Dark mode colors */
+  --background-color-dark: #343A40;
+  --text-color-dark: #F8F9FA;
+  --primary-color-dark: #007BFF;
+  --secondary-color-dark: #6C757D;
+  --tertiary-color-dark: #28A745;
+
+  /* Define custom properties for moon and sun icon colors */
+  --moon-icon-color: #f4f3ee; /* Light gray for moon icon */
+  --sun-icon-color: #ffd700; /* Gold for sun icon */
+}
+
+/* General styling */
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: #ffffffbe;
+}
+
+.navbar, .footer {
+  background-color: var(--primary-color-light);
+  color: var(--text-color-light);
+}
+
+body.dark-mode .navbar, body.dark-mode .footer {
+  background-color: var(--primary-color-dark);
+  color: var(--text-color-dark);
+}
+
+.card {
+  background-color: var(--secondary-color-light);
+  color: var(--text-color-light);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .card {
+  background-color: var(--secondary-color-dark);
+  color: #FFFFFF;
+}
+
+/* Map styling */
+.state-borders {
+  fill: none;
+  stroke: #000;
+  stroke-linejoin: round;
+}
+
+/* Tooltip styling */
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 8px;
+  font: 12px sans-serif;
+  background: var(--secondary-color-light);
+  color: var(--text-color-light);
+  border: 1px solid var(--primary-color-light);
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+body.dark-mode .tooltip {
+  background: var(--secondary-color-dark);
+  color: var(--text-color-dark);
+  border-color: var(--primary-color-dark);
+}
+
+/* Line chart styling */
+.line {
+  fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: none;
+  stroke: black;
+}
+
+/* Legend styling */
+.legend {
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .line {
+    stroke-width: 1.5px;
+  }
+}
+
+/* Search and Filter UI Styling */
+.search-filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  align-self: center;
+}
+
+.search-input, .filter-dropdown {
+  border: 1px solid var(--secondary-color-light);
+  padding: 10px; /* Adjusted padding to match height */
+  border-radius: 5px;
+  background-color: var(--background-color-light);
+  background-image: url('/images/magnifying-glass-icon.svg'); /* Correct path to the magnifying glass icon */
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 15px;
+  color: var(--text-color-light);
+  position: relative;
+  height: 38px; /* Ensuring search input and filter dropdown have the same height */
+  width: 58%;
+}
+
+body.dark-mode .search-input, body.dark-mode .filter-dropdown {
+  background-color: var(--background-color-dark);
+  color: #FFFFFF;
+  border-color: var(--secondary-color-dark);
+}
+
+@media (max-width: 992px) {
+  .search-filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Dark mode toggle and navbar title styling */
+.dark-mode-toggle {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  position: absolute;
+  right: 0;
+  color:#FFFFFF;
+}
+
+.navbar-brand-modified {
+  margin-left: 1rem;
+}
+
+.fas.fa-sun {
+  color: #FFD700; /* Sun icon color */
+}
+
+.fas.fa-moon {
+  color: #FFFFFF; /* Moon icon color */
+}
+
+/* Dark mode toggle button styles */
+.dark-mode-toggle .moon, .dark-mode-toggle .sun {
+  display: inline-block;
+  width: 24px; /* Icon size */
+  height: 24px; /* Icon size */
+  background-size: cover;
+  cursor: pointer;
+}
+
+.dark-mode-toggle .moon {
+  background-image: url('/images/moon-icon.svg'); /* Path to moon icon */
+  background-color: var(--moon-icon-color);
+}
+
+.dark-mode-toggle .sun {
+  background-image: url('/images/sun-icon.svg'); /* Path to sun icon */
+  background-color: var(--sun-icon-color);
+}
+
+/* Ensure compatibility with neumorphism styles */
+.dark-mode-toggle {
+  border-radius: 50%;
+}
+
+/* Visualization container and title styling */
+.visualization-container {
+  position: relative;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding-top: 20px; /* Adjusted space for the title */
+  margin: 20px auto; /* Centering the container */
+  width: fit-content; /* Adjust width to fit the content */
+}
+
+.visualization-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: calc(100% - 30px); /* Adjust width to fit inside the container */
+  box-sizing: border-box;
+}
+
+.visualization-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Responsive layout adjustments */
+@media (min-width: 992px) {
+  main.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .visualization-container {
+    flex: 1 1 calc(33.333% - 40px); /* Adjust the width minus margin */
+    margin: 20px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  main.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .visualization-container {
+    flex: 1 1 calc(50% - 40px); /* Adjust the width minus margin */
+    margin: 20px auto; /* Centering the container */
+  }
+}
+
+@media (max-width: 767px) {
+  .visualization-container {
+    margin: 20px auto; /* Centering the container */
+    width: calc(100% - 40px); /* Adjust the width minus margin */
+  }
+}
+
+/* Neumorphism headers for containers */
+.container-header {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 0;
+  padding: 10px;
+  background: #007bff; /* Adjusted for light mode */
+  color: white;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* New styles for map container adjustments */
+.main-map-container {
+  display: flex;
+  flex-direction: column; /* Changed from flex to column to stack maps vertically */
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: auto; /* Changed from fixed height to auto to accommodate both maps */
+}
+
+.visualization-container.map, .leafletMapContainer {
+  width: 100%; /* Adjusted width to take full container width */
+  height: 600px; /* Fixed height for both maps */
+  display: block; /* Ensure both maps are displayed */
+  margin-bottom: 20px; /* Added margin to separate the maps */
+}
+
+/* Adjustments for map overflow and matching sizes */
+.visualization-container.map, .leafletMapContainer {
+  overflow: hidden; /* Changed from visible to hidden to prevent overflow */
+}
